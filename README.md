@@ -2,9 +2,9 @@
 
 ## 👥 Équipe
 
-* **Anas Djamaoui** — Coordinateur / Intégration
-* **Abdellah Idfath** — UI & Design
-* **Zakaria Lafhiel** — Médias & Composants
+* **Anas Djamaoui** 
+* **Abdellah Idfath** 
+* **Zakaria Lafhiel** 
 
 ## 🎯 Objectif
 
@@ -19,7 +19,7 @@ Créer le site officiel NextLevel E‑Sport : vitrine moderne, responsive et ins
 
 ## 📄 Pages clés
 
-Accueil · Équipes · Shop · Coaching · Médias · Innovation · Classement · Communauté · Recrutement
+Home · Championships · Shop 
 
 ## 🧩 Livrables
 
