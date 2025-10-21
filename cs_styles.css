@@ -1,0 +1,38 @@
+.nav-bar {
+    position: fixed;
+    top: 0;
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.723);
+    backdrop-filter: blur(8px);
+}
+
+.logo {
+    width: 4rem;
+    height: auto;
+    margin-left: 1rem;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: Orbitron;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body{
+    background-image: linear-gradient(to bottom , #000000 , #1F0107 , #79021C);
+}
