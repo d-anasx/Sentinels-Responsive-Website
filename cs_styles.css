@@ -1,128 +1,208 @@
 .nav-bar {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    padding: 10px 16px;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.723) ;
-    backdrop-filter: blur(8px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.723);
+  backdrop-filter: blur(8px);
+  z-index: 100;
 }
 
 .logo {
-    width: 4rem;
-    height: auto;
-    margin-left: 1rem;
+  width: 4rem;
+  height: auto;
+  margin-left: 1rem;
 }
 
 nav {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
-    margin-right: 1rem;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  margin-right: 1rem;
 }
 a {
-    text-decoration: none;
-    color: inherit;
-    font-family: Orbitron;
+  text-decoration: none;
+  color: inherit;
+  font-family: Orbitron;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: white;
-    font-family: Geo ;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: Geo;
 }
 
-body{
-    background-image: linear-gradient(to bottom , #000000 , #1F0107 , #79021C);
-    background-repeat: no-repeat ;
-    
+body {
+  background-image: linear-gradient(to bottom, #000000, #1f0107, #79021c);
+  background-repeat: no-repeat;
 }
 
-.hero{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2em;
-    margin-top: 4em;
-    height: 30em;
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('public/valorant-champions-tour-2024-americas-kickoff.jpeg');
-    background-position: 25% 25%;
-    position: relative;
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em;
+  margin-top: 4em;
+  height: 30em;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("public/valorant-champions-tour-2024-americas-kickoff.jpeg");
+  background-position: 25% 25%;
+  position: relative;
 }
 
-.hero::after{
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3) ), url('public/SentinelsSkyfallEditsentinelsvalorantvct-ezgif.com-video-to-gif-converter.gif')  no-repeat center/cover;
-      opacity: 0;
-      z-index: 1 ;
-      pointer-events: none;
-      transition: opacity 0.5s ease-in-out;
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url("public/SentinelsSkyfallEditsentinelsvalorantvct-ezgif.com-video-to-gif-converter.gif")
+      no-repeat center/cover;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.hero:hover::after{
-    opacity: 1;
+.hero:hover::after {
+  opacity: 1;
 }
 
-.hero-logo{
-    display: flex;
-    font-size: 1.5em;
+.hero-logo {
+  display: flex;
+  font-size: 1.5em;
 }
 
-.hero-img{
-    width: 2em;
+.hero-img {
+  width: 2em;
 }
 
-.hero-content{
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    z-index: 10;
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  z-index: 10;
+}
+
+.hero-title h2 {
+  font-size: 4em;
+  width: 10em;
+}
+
+.championships {
+  background-color: rgba(0, 0, 0, 0.075);
+  border-radius: 0.3em;
+  margin: 2em 1em 2em 1em;
+  height: 26em;
+  gap: 1em;
+  justify-content: space-around;
+  box-shadow: 5px 5px 20px #a41515;
+  padding: 1em 2em 1em 2em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.championships_content {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.championships_content img {
+  width: 13em;
+  height: 8em;
+  border-radius: 0.2em;
+}
+
+.championships_text h4 {
+  font-size: 1.5em;
+}
+
+.championships_text p {
+  color: #aeaaaa;
+}
+
+.highlights_container {
+  background-color: rgba(0, 0, 0, 0.075);
+  border-radius: 0.3em;
+  margin: 2em 5em 2em 5em;
+  box-shadow: 5px 5px 20px #a41515;
+  padding: 1em 2em 1em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4em;
+}
+
+.highlights_container h1{
+  text-align: center;
+}
+
+.highlights{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2em;
+  width: 100%;
+}
+
+.highlight {
+  gap: 2em;
+  height: 16em;
+  border-radius: 0.3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5em;
+}
+
+.highlight_img {
+  background-image: url("public/Chàng\ trai\ gốc\ Việt\ vô\ địch\ VCT\ Masters\ Madrid\ 2024.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 13em;
+  height: 17em;
+  position: relative;
+  border-radius: 0.3em;
+}
+
+svg {
+  width: 3em;
+  height: 3em;
+  padding: 0.6em;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.play {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
 }
 
 
-.hero-title h2{
-    font-size: 4em;
-    width: 10em;
+.highlight_text{
+  opacity: 0;
+  transition: 0.3s ease-in-out ;
 }
 
-.championships{
-    background-color: rgba(0, 0, 0, 0.075);
-    border-radius: 0.3em;
-    margin: 2em 1em 2em 1em;
-    height: 26em;
-    gap: 1em;
-    justify-content: space-around;
-    box-shadow: 5px 5px  20px #A41515;
-    padding: 1em 2em 1em 2em;
-    display: flex;
-    flex-wrap: wrap;
+.highlight_img:hover + .highlight_text{
+  opacity: 1;
 }
 
-.championships_content{
-    display: flex;
-    align-items: center ;
-    gap: 1em;
-}
 
-.championships_content img{
-    width: 13em;
-    height: 8em;
-    border-radius: 0.2em;
-}
 
-.championships_text h4{
-    font-size: 1.5em;
-}
-
-.championships_text p{
-    color: #AEAAAA;
-}
 
