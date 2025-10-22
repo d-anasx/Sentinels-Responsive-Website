@@ -32,6 +32,11 @@ header {
   height: auto;
   margin-left: 1rem;
 }
+
+.logo-text {
+  height: 2.4rem;
+}
+
 nav {
   display: flex;
   gap: 4rem;
@@ -46,22 +51,32 @@ a {
 }
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
   background-image: url(public/champions-made.jpg);
   background-size: cover;
   min-height: 100vh;
   background-repeat: no-repeat;
 }
 
-.hero-text {
+h1 {
+  font-size: 5rem;
 }
 
-.paragtaph {
+p{
+  font-size: 1.3rem;
+}
+
+.hero-paragtaph {
   background-color: #43010f86;
-  width: 20rem;
+  width: 25rem;
   padding: 2rem;
-  position: absolute;
-  right: 3rem;
-  top: auto;
   backdrop-filter: blur(8px);
   border-radius: 8px;
+}
+
+h1 , .hero-paragtaph {
+  margin: 3.4rem;
 }
