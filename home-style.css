@@ -1,0 +1,67 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(180deg, black, #79021c);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  color: white;
+  font-family: Geo;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-bar {
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.723);
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  width: 4rem;
+  height: auto;
+  margin-left: 1rem;
+}
+nav {
+  display: flex;
+  gap: 4rem;
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: Orbitron;
+}
+
+.hero {
+  background-image: url(public/champions-made.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.hero-text {
+}
+
+.paragtaph {
+  background-color: #43010f86;
+  width: 20rem;
+  padding: 2rem;
+  position: absolute;
+  right: 3rem;
+  top: auto;
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+}
