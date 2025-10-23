@@ -37,11 +37,55 @@ header {
   height: 2.4rem;
 }
 
-nav {
+.logo-foot {
+  width: 10rem;
+  height: auto;
+}
+
+.social-logo {
+  width: 2.5rem;
+  height: auto;
+}
+
+.mobile-icon {
+  display: none;
+  font-size: 4rem;
+}
+
+.pc-nav {
   display: flex;
   gap: 4rem;
   margin-top: 1.5rem;
   margin-right: 1rem;
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  opacity: 0%;
+}
+
+.col-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 700px) {
+  .mobile-icon {
+    display: flex;
+  }
+  .pc-nav {
+    display: none;
+  }
+  .col-nav:hover .mobile-icon {
+    display: none;
+  }
+  .col-nav:hover .mobile-nav {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    opacity: 100%;
+  }
 }
 
 a {
@@ -65,7 +109,7 @@ h1 {
   font-size: 5rem;
 }
 
-p{
+p {
   font-size: 1.3rem;
 }
 
@@ -77,6 +121,44 @@ p{
   border-radius: 8px;
 }
 
-h1 , .hero-paragtaph {
+.hero-paragtaph:hover {
+  box-shadow: 0 20px 40px rgba(246, 59, 59, 0.2);
+  transform: translateY(-2px);
+  transition: 0.3s ease-in-out;
+}
+
+h1,
+.hero-paragtaph {
   margin: 3.4rem;
+}
+
+.merch {
+  background-color: #000000b9;
+  box-shadow: 0 0px 20px rgba(255, 0, 0, 0.445) inset;
+}
+
+footer {
+  background-image: linear-gradient(180deg, #79021c9f, black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-footer {
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.socials {
+  display: flex;
+  gap: 1.3rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 4rem;
+  margin-right: 2rem;
 }
