@@ -1,13 +1,20 @@
-.nav-bar {
-  position: fixed;
-  width: 100%;
+header {
+  position: sticky;
   top: 0;
+  z-index: 100;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+.nav-bar {
   padding: 10px 16px;
   display: flex;
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.723);
   backdrop-filter: blur(8px);
-  z-index: 100;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .logo {
@@ -16,11 +23,42 @@
   margin-left: 1rem;
 }
 
-nav {
+.logo-text {
+  height: 2.4rem;
+}
+
+.logo-foot {
+  width: 10rem;
+  height: auto;
+}
+
+.social-logo {
+  width: 2.5rem;
+  height: auto;
+}
+
+.mobile-icon {
+  display: none;
+  font-size: 4rem;
+}
+
+.pc-nav {
   display: flex;
-  gap: 1rem;
+  gap: 4rem;
   margin-top: 1.5rem;
   margin-right: 1rem;
+}
+
+.mobile-nav {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  opacity: 0%;
+}
+
+.col-nav {
+  display: flex;
+  flex-direction: column;
 }
 a {
   text-decoration: none;
@@ -39,14 +77,15 @@ a {
 body {
   background-image: linear-gradient(to bottom, #000000, #1f0107, #79021c);
   background-repeat: no-repeat;
+  width: 100%;
 }
+
 
 .hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2em;
-  margin-top: 4em;
+  padding: 1em;
   height: 30em;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("public/valorant-champions-tour-2024-americas-kickoff.jpeg");
@@ -67,7 +106,7 @@ body {
   opacity: 0;
   z-index: 1;
   pointer-events: none;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .hero:hover::after {
@@ -80,7 +119,7 @@ body {
 }
 
 .hero-img {
-  width: 2em;
+  width: 2%;
 }
 
 .hero-content {
@@ -99,16 +138,17 @@ body {
   background-color: rgba(0, 0, 0, 0.075);
   border-radius: 0.3em;
   margin: 2em 1em 2em 1em;
-  height: 26em;
+  height: fit-content;
   gap: 1em;
   justify-content: space-around;
   box-shadow: 5px 5px 20px #a41515;
-  padding: 1em 2em 1em 2em;
+  padding: 1em 1em 1em 1em;
   display: flex;
   flex-wrap: wrap;
 }
 
 .championships_content {
+  padding-left: 0.5em;
   display: flex;
   align-items: center;
   gap: 1em;
@@ -149,22 +189,26 @@ body {
 .championships_text h4 {
   font-size: 1.5em;
   width: 14em;
+  text-align: center;
 }
 
 .championships_text p {
   color: #aeaaaa;
+  text-align: center;
 }
 
 .highlights_container {
   background-color: rgba(0, 0, 0, 0.075);
   border-radius: 0.3em;
-  margin: 2em 5em 2em 5em;
+  margin: auto;
   box-shadow: 5px 5px 20px #a41515;
   padding: 1em 2em 5em 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4em;
+  width: fit-content;
+  height: fit-content;
 }
 
 .highlights_container h1{
@@ -178,34 +222,34 @@ body {
   align-items: center;
   gap: 6em;
   width: 100%;
+  height: fit-content;
   
 }
 
 .highlight {
-  height: 16em;
+  height: fit-content;
   border-radius: 0.3em;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5em;
+  gap: 3em;
   transition: 0.3s;
   width: 85%;
 }
 
 .highlight_img{
   background-image: url("public/Chàng\ trai\ gốc\ Việt\ vô\ địch\ VCT\ Masters\ Madrid\ 2024.jpg");
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 13em;
   height: 17em;
   position: relative;
   border-radius: 0.3em;
+  transition: 0.3s;
 }
 
 .highlight:nth-of-type(2) .highlight_img {
   background-image: url("public/hourglass.jpg");
- 
   
 }
 .highlight:nth-of-type(3) .highlight_img{
@@ -265,10 +309,7 @@ svg {
   flex-direction: row-reverse;
 }
 
-.highlight_img{
-  transition: 0.3s;
-  position: relative; 
-}
+
 
 .highlight:hover .highlight_img{
   transform: scale(1.2) translate(-20%);
@@ -301,6 +342,86 @@ svg {
 .highlight:hover .img_date{
   opacity: 1;
 
+}
+
+@media ( min-width: 360px ) and (max-width: 700px) {
+  .mobile-icon {
+    display: flex;
+  }
+  .pc-nav {
+    display: none;
+  }
+  .col-nav:hover .mobile-icon {
+    display: none;
+  }
+  .col-nav:hover .mobile-nav {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    opacity: 100%;
+  }
+
+   .championships{
+    justify-content: center;
+  }
+
+  .championships_content{
+    width: 100%;
+}
+
+.championships_text h4 {
+  font-size: 1.5em;
+  width: 10em;
+  text-align: center;
+}
+
+.hero-title h2 {
+  font-size: 3.5em;
+  width: 6em;
+}
+  
+}
+
+
+@media (max-width : 1255px){
+  .championships_content{
+    flex-direction: column;
+    
+    justify-content: center;
+  }
+}
+
+
+@media (max-width : 800px){
+  .highlight{
+    flex-direction: column;
+    gap: 1em;
+  }
+  .highlight_text{
+  opacity: 1;
+}
+
+  .highlight:nth-child(even) {
+  flex-direction: column;
+}
+
+.highlight:hover .highlight_img{
+  transform: scale(1) translate(0%);
+}
+
+.highlight:hover #even_image{
+  transform: scale(1) translate(0%);
+}
+
+.highlight:hover  .highlight_text{
+  transform: translate(0%);
+}
+
+.highlight:hover  #even_text{
+  transform: translate(0%);
+}
+
+  
 }
 
 

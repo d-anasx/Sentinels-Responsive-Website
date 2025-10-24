@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="cs_styles.css" />
   </head>
   <body>
-    <header>
+        <header>
       <div class="nav-bar">
         <a href="home.html"
           ><img
@@ -26,16 +26,30 @@
             src="public/sentinels-seeklogo.svg"
             alt="sentinels seek logo"
           />
-          <img src="public/sentinels-name-logo.svg" alt="sentinels name logo" />
+          <img
+            class="logo-text"
+            src="public/sentinels-name-logo.svg"
+            alt="sentinels name logo"
+          />
         </a>
-        <nav>
+        <div class="col-nav">
+          <div class="mobile-icon"><a href="#">☰</a></div>
+          <div>
+            <nav class="mobile-nav">
+              <a href="home.html">Home</a>
+              <a href="Championships.html">Championships</a>
+              <a href="shop.html">Shop</a>
+            </nav>
+          </div>
+        </div>
+        <nav class="pc-nav">
           <a href="home.html">Home</a>
           <a href="Championships.html">Championships</a>
           <a href="shop.html">Shop</a>
         </nav>
       </div>
     </header>
-    <div>
+    <div class="container">
       <section>
         <div class="hero">
           <div class="hero-content">
