@@ -2,133 +2,215 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop page</title>
-    <link rel="stylesheet" href="home-style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Orbitron:wght@400..900&display=swap"
-        rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sentinels Shop</title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="shoppage.css" />
 </head>
-<link rel="stylesheet" href="shoppage.css">
 
 <body>
-    <header>
-        <div class="nav-bar">
-            <a href="home.html"><img class="logo" src="public/sentinels-seeklogo.svg" alt="sentinels seek logo" />
-                <img class="logo-text" src="public/sentinels-name-logo.svg" alt="sentinels name logo" />
-            </a>
-            <nav>
-                <a href="home.html">Home</a>
-                <a href="Championships.html">Championships</a>
-                <a href="shop.html">Shop</a>
+  <!-- HEADER -->
+     <header>
+      <div class="nav-bar">
+        <a href="home.html"
+          ><img
+            class="logo"
+            src="public/sentinels-seeklogo.svg"
+            alt="sentinels seek logo"
+          />
+          <img
+            class="logo-text"
+            src="public/sentinels-name-logo.svg"
+            alt="sentinels name logo"
+          />
+        </a>
+        <div class="col-nav">
+          <div class="mobile-icon"><a href="#">☰</a></div>
+          <div>
+            <nav class="mobile-nav">
+              <a href="home.html">Home</a>
+              <a href="Championships.html">Championships</a>
+              <a href="shop.html">Shop</a>
             </nav>
+          </div>
         </div>
+        <nav class="pc-nav">
+          <a href="home.html">Home</a>
+          <a href="Championships.html">Championships</a>
+          <a href="shop.html">Shop</a>
+        </nav>
+      </div>
     </header>
 
-    <!-- salutation -->
-    <section class="salutation">
-        <article class="article">
-            <div id="teamname">SENTINELS</div>
-            <div class="welcome">
-                <p>WELCOME TO OUR</p>
-            </div>
-            <div class="shop">
-                <p>SHOP</p>
-            </div>
-            <p id="motivational">Hello ser everythings is cool and with lower,prices just enjoy my friend., you dont
-                have to worry about products!<br>Hello ser everythings is cool and with lower,prices just enjoy my
-                friend., you dont have to worry about products! Hello ser everythings is cool and with lower,prices just
-                enjoy my friend., you dont have to worry about products!<br>Hello ser everythings is cool and with
-                lower,prices just enjoy my friend., you dont have to worry about products!<br>Hello ser everythings is
-                cool and with lower,prices just enjoy my friend., you dont have to worry about products!<br>Hello ser
-                everythings is cool and with lower,prices just enjoy my friend., you dont have to worry about products
-                ..</p>
+  <!-- SALUTATION -->
+  <section class="salutation">
+    <article class="article">
+      <div id="teamname">SENTINELS</div>
+      <div class="welcome"><p>WELCOME TO OUR</p></div>
+      <div class="shop"><p>SHOP</p></div>
+      <p id="motivational">
+        Hello sir! Everything is cool and at lower prices, just enjoy my friend.
+        You don’t have to worry about products! Quality and value meet here.
+      </p>
+    </article>
 
-        </article>
-        <div class="player">
-            <img src="shop page/valorant.png" alt="valorant logo" id="bottom" width="33%" height="346px">
-            <img src="shop page/Gemini_Generated_Image_6prl56prl56prl56_1.webp" alt="a player of sentinels" id="top"
-                height="500px" width="32%">
-        
-            </div>
-      
-    </section>
-      <div class="tapes">
-            <div class="top-tape"><em>HIGH QUALITY HIGH QUALITY HIGH QUALITY HIGH QUALITY HIGH QUALITY HIGH QUALITY</em></div>
-            <div class="bottom-tape">LOWER PRICE LOWER PRICE LOWER PRICE LOWER PRICE LOWER PRICE LOWER PRICE</div>
-        </div>
+    <div class="player">
+      <img src="shop page/valorant.png" alt="valorant logo" id="bottom" />
+      <img src="shop page/Gemini_Generated_Image_6prl56prl56prl56_1.webp" alt="Sentinels player" id="top" />
+    </div>
+  </section>
 
-    <!-- T-shirts place -->
- 
-       <section class="products">
-        <div class="more-expansive">
+  <!-- TAPES -->
+  <div class="tapes">
+    <div class="top-tape">
+      <em>HIGH QUALITY HIGH QUALITY HIGH QUALITY HIGH QUALITY HIGH QUALITY HIGH QUALITY</em>
+    </div>
+    <div class="bottom-tape">
+      LOWER PRICE LOWER PRICE LOWER PRICE LOWER PRICE LOWER PRICE LOWER PRICE
+    </div>
+  </div>
 
+  <!-- PRODUCTS: T-SHIRTS -->
+  <section class="products shirts">
+    <h2 id="product-class">SHIRTS</h2>
 
-        </div>
-        <div class="status">THE HIGHEST PRICE</div>
-        <div class="details">
-            <div class="">MODERN T-SHIRT</div>
-        </div>
-        <div class="motivational">THE QUALITY , THE PRICE , THR GREATNESSE EVERYTHING IIS AMIIZING IN THIS PLACE !</div>
-        <div class="price">19.99</div>
-                <button class="btn" type="submit"><a href="">BUY NOW</a><span class="righ-arrow">></span></button>
+    <div class="more-expansive">
+      <img src="shop page/T-SHIRT1-removebg-preview.png" alt="T-shirt" />
+      <div class="more-expansive-name">SENTINELS RACING TEE</div>
+      <div class="status">THE HIGHEST PRICE</div>
+      <div class="descripe">MODERN T-SHIRT</div>
+      <p class="motivational">THE QUALITY, THE PRICE, THE GREATNESS — EVERYTHING IS AMAZING IN THIS PLACE!</p>
+      <div class="price">$19.99</div>
+      <a href="#" class="btn">BUY NOW <span class="right-arrow">></span></a>
+    </div>
 
-
-        <div id="product-class">SHIRTS</div>
-        <div class="moreexpinsive"></div>
-
-
+    <div class="product-list">
+      <div class="product-card">
+        <img src="shop page/T-SHIRT1-removebg-preview.png" alt="SEN x Anime Impulse Tee" class="product-img" />
         <div class="product-name">SEN x Anime Impulse Tee</div>
+        <div class="price">$10.99</div>
+        <a href="#" class="btn">BUY NOW ></a>
+      </div>
 
-
-        <div class="product-card">
-            <img class="t-shirt-img" alt="T-shirt-SEN x Anime Impulse Tee">
-            <div>$10.99</div>
-
-        </div>
-                <button class="btn" type="submit"><a href="">BUY NOW</a><span class="righ-arrow">></span></button>
-
-
+      <div class="product-card">
+        <img src="shop page/Cubert_CropTop_Layflat-removebg-preview.png" alt="Cubert Crop Top" class="product-img" />
         <div class="product-name">Cubert Crop Top</div>
-        <div class="product-card">
-            <img class="t-shirt-img" src="" alt="Cubert Crop Top">
-            <div>$11.99</div>
+        <div class="price">$11.99</div>
+        <a href="#" class="btn">BUY NOW ></a>
+      </div>
 
-        </div>
-                <button class="btn" type="submit"><a href="">BUY NOW</a><span class="righ-arrow">></span></button>
-
-
-
+      <div class="product-card">
+        <img src="shop page/15OrangeShirt-removebg-preview.png" alt="King Of The Court Tee" class="product-img" />
         <div class="product-name">King Of The Court Tee</div>
+        <div class="price">$13.99</div>
+        <a href="#" class="btn">BUY NOW ></a>
+      </div>
 
-        <div class="product-card">
-            <img class="t-shirt-img" src="" alt="King Of The Court Tee">
-            <div>$13.99</div>
-
-        </div>
-               <button class="btn" type="submit"><a href="">BUY NOW</a><span class="righ-arrow">></span></button>
-
-
-
+      <div class="product-card">
+        <img src="shop page/T-SHIRT2-preview-removebg-preview.png" alt="Sentinels Racing Tee" class="product-img" />
         <div class="product-name">Sentinels Racing Tee</div>
+        <div class="price">$19.99</div>
+        <a href="#" class="btn">BUY NOW ></a>
+      </div>
+    </div>
+  </section>
 
-        <div class="product-card">
-            <img class="t-shirt-img" src="" alt="Sentinels Racing Tee">
-            <div>$19.99</div>
+  <!-- PRODUCTS: ACCESSORIES -->
+  <section class="products accessories">
+    <h2 id="product-class">ACCESSORIES</h2>
 
-        </div>
-        <button class="btn" type="submit"><a href="">BUY NOW</a><span class="righ-arrow">></span></button>
+    <div class="more-expansive">
+      <img src="shop page/casque_nopng-removebg-preview.png" alt="Headset" />
+      <div class="more-expansive-name">Razer Blackshark V3 Pro - Sentinels Edition</div>
+      <div class="status">THE HIGHEST PRICE</div>
+      <div class="descripe">MODERN ACCESSORIES</div>
+      <p class="motivational">THE QUALITY, THE PRICE, THE GREATNESS — EVERYTHING IS AMAZING IN THIS PLACE!</p>
+      <div class="price">$100.00</div>
+      <a href="#" class="btn">BUY NOW <span class="right-arrow">></span></a>
+    </div>
 
+    <div class="product-list">
+      <div class="product-card">
+        <img src="shop page/cup_no_png-removebg-preview.png" alt="Sen Cup" class="product-img" />
+        <div class="product-name">Sen Cup</div>
+        <div class="price">$20.00</div>
+        <a href="#" class="btn">BUY NOW ></a>
+      </div>
 
+      <div class="product-card">
+        <img src="shop page/bottle.png" alt="Water Bottle" class="product-img" />
+        <div class="product-name">Volleyball Club Water Bottle</div>
+        <div class="price">$23.99</div>
+        <a href="#" class="btn">BUY NOW ></a>
+      </div>
+<div class="product-card">
+        <img src="shop page/nonos_no_png-removebg-preview.png" alt="SEN Cubert" class="product-img" />
+        <div class="product-name">SEN Cubert</div>
+        <div class="price">$22.99</div>
+        <a href="#" class="btn">BUY NOW ></a>
+      </div>
+ 
+      <div class="product-card">
+        <img src="shop page/bag.png" alt="Backpack" class="product-img" />
+        <div class="product-name">Back to LCS Backpack</div>
+        <div class="price">$29.99</div>
+        <a href="#" class="btn">BUY NOW ></a>
+      </div>
+    </div>
+      </section>
+      
 
+  <!-- PRODUCTS: HOODIES -->
+  <section class="products hoodies">
+    <h2 id="product-class">HOODIES</h2>
 
-    </section>
-  <!-- Accessories place -->
+    <div class="more-expansive">
+      <img src="shop page/HODDY_NO_PNG-removebg-preview.png" alt="Red Hoodie" />
+      <div class="more-expansive-name">SEN City Race Club Hoodie - Red</div>
+      <div class="status">THE HIGHEST PRICE</div>
+      <div class="descripe">MODERN HOODIES</div>
+      <p class="motivational">THE QUALITY, THE PRICE, THE GREATNESS — EVERYTHING IS AMAZING IN THIS PLACE!</p>
+      <div class="price">$60.90</div>
+      <a href="#" class="btn">BUY NOW <span class="right-arrow">></span></a>
+    </div>
 
+    <div class="product-list">
+      <div class="product-card">
+        <img src="shop page/HODDY_4_NO_PNG-removebg-preview.png" alt="Black Hoodie" class="product-img" />
+        <div class="product-name">SEN Anorak Hoodie</div>
+        <div class="price">$42.99</div>
+        <a href="#" class="btn">BUY NOW ></a>
+      </div>
 
+      <div class="product-card">
+        <img src="shop page/HODDY_NO_5_NO_PNG-removebg-preview.png" alt="Red/Black Hoodie" class="product-img" />
+        <div class="product-name">SEN Cubert Hoodie</div>
+        <div class="price">$45.99</div>
+        <a href="#" class="btn">BUY NOW ></a>
+      </div>
+
+      <div class="product-card">
+        <img src="shop page/HODDY_2_NO_PNG-removebg-preview.png" alt="Black/White Hoodie" class="product-img" />
+        <div class="product-name">SEN City Race Club Hoodie - Black</div>
+        <div class="price">$48.40</div>
+        <a href="#" class="btn">BUY NOW ></a>
+      </div>
+
+      <div class="product-card">
+        <img src="shop page/HODDY_3_NO_PNG-removebg-preview.png" alt="White Hoodie" class="product-img" />
+        <div class="product-name">Karasuno Cream Hoodie</div>
+        <div class="price">$55.99</div>
+        <a href="#" class="btn">BUY NOW ></a>
+      </div>
+    </div>
+  </section>
 </body>
-
 </html>
