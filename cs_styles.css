@@ -1,5 +1,5 @@
-body {
-  overflow-x: hidden;
+body,html {
+  overflow-x: clip;
 }
 
 header {
@@ -14,6 +14,7 @@ header {
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.723);
   backdrop-filter: blur(8px);
+  
 }
 .logo {
   width: 3rem;
@@ -73,11 +74,19 @@ a {
 }
 
 body {
-  background-image: linear-gradient(to bottom, #000000, #1f0107, #79021c);
+  /* background-image: linear-gradient(to bottom, #000000, #1f0107, #79021c); */
+   background: linear-gradient(168deg, #1e1111, #501e1e);
+  background-size: 600% 600%;
   background-repeat: no-repeat;
   width: 100%;
+  animation: AnimationName 7s ease infinite;
 }
 
+@keyframes AnimationName {
+    0%{background-position:58% 0%}
+    50%{background-position:43% 100%}
+    100%{background-position:58% 0%}
+}
 
 .hero {
   display: flex;
@@ -133,7 +142,7 @@ body {
 }
 
 .championships {
-  background-color: rgba(0, 0, 0, 0.075);
+  background-color: rgb(43, 16, 16);
   border-radius: 0.3em;
   margin: 2em 1em 2em 1em;
   height: fit-content;
@@ -196,17 +205,16 @@ body {
 }
 
 .highlights_container {
-  background-color: rgba(0, 0, 0, 0.075);
+  background-color: rgb(43, 16, 16);
   border-radius: 0.3em;
-  margin: auto;
   box-shadow: 5px 5px 20px #a41515;
-  padding: 1em 2em 5em 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4em;
-  width: fit-content;
   height: fit-content;
+  width: 50vw;
+  margin: auto  ;
 }
 
 .highlights_container h1{
@@ -216,10 +224,11 @@ body {
 .highlights{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+  padding: 2em 1em 2em 1em;
   gap: 6em;
-  width: 100%;
   height: fit-content;
   
 }
@@ -232,15 +241,14 @@ body {
   justify-content: center;
   gap: 3em;
   transition: 0.3s;
-  width: 85%;
 }
 
 .highlight_img{
   background-image: url("public/Chàng\ trai\ gốc\ Việt\ vô\ địch\ VCT\ Masters\ Madrid\ 2024.jpg");
   background-position: center;
   background-size: cover;
-  width: 13em;
-  height: 17em;
+  width: 16em;
+  height: 20em;
   position: relative;
   border-radius: 0.3em;
   transition: 0.3s;
@@ -288,6 +296,10 @@ svg {
   opacity: 0;
   transition: 0.3s ease-in-out ;
   text-shadow: 0px 8px 25px rgba(229, 93, 93, 0.6) ;
+}
+
+.highlight_text h1{
+  width: 8em;
 }
 
 
@@ -361,6 +373,10 @@ svg {
   font-size: 3.5em;
   width: 6em;
 }
+
+.highlights_container{
+  width: fit-content;
+}
   
 }
 
@@ -370,11 +386,10 @@ svg {
     flex-direction: column;
     
     justify-content: center;
+
+    
   }
-}
 
-
-@media (max-width : 800px){
   .highlight{
     flex-direction: column;
     gap: 1em;
@@ -402,9 +417,10 @@ svg {
 .highlight:hover  #even_text{
   transform: translate(0%);
 }
-
-  
 }
+
+
+
 
 @media (max-width: 700px) {
   .hero {
