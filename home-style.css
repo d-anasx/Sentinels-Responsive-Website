@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  transition: 0.3s;
 }
 
 body {
@@ -75,16 +76,19 @@ a {
 }
 
 main {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   row-gap: 4rem;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: flex-end;
+  padding-right: 4rem;
   justify-content: center;
   background-image: url(public/champions-made.jpg);
+  background-color: red;
   background-size: cover;
   min-height: 100vh;
   background-repeat: no-repeat;
@@ -108,17 +112,11 @@ p {
   border-radius: 8px;
 }
 
-h1,
-.hero-paragtaph {
-  margin: 3.4rem;
-}
-
 .latest {
   background-color: #43010f70;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   box-shadow: 0px 5px 20px #ff00002a;
-  min-height: 60rem;
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -171,16 +169,21 @@ h3 {
   background-color: #280009;
   border-radius: 40px;
   box-shadow: 0px 0px 20px #ff000046;
-  min-height: 40rem;
+  min-height: 35rem;
   display: flex;
   flex-direction: column;
   justify-items: center;
 }
 
+.sponsor-strip {
+  overflow: hidden;
+}
+
 .sponser-cards {
   display: flex;
-  justify-content: center;
   gap: 10rem;
+  animation: scroll 30s linear infinite;
+  width: max-content;
 }
 
 .s-card {
@@ -190,7 +193,7 @@ h3 {
   border-radius: 8px;
   display: flex;
   justify-content: center;
-  box-shadow: 0px 0px 20px #ff000042;
+  box-shadow: inset 0px 0px 20px #ff000042;
   transition: 0.3s ease-in-out;
 }
 
@@ -207,12 +210,21 @@ h3 {
 }
 
 .s-card:hover {
-  box-shadow: 0px 0px 40px #ff000042;
+  box-shadow: inset 0px 0px 40px #ff000042;
   transform: translateY(-2px);
 }
 
 .s-card img:hover {
   filter: drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.671));
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .team {
@@ -232,6 +244,7 @@ h3 {
 }
 .team-cards {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 5rem;
 }
@@ -259,6 +272,11 @@ h3 {
   overflow: hidden;
 }
 
+.t-card button {
+  margin-left: 60%;
+  margin-bottom: 0.5rem;
+}
+
 .player-info {
   display: flex;
   flex-direction: column;
@@ -271,12 +289,10 @@ h4 {
 }
 
 button {
-  margin-left: 60%;
-  margin-bottom: 0.5rem;
   background-color: #ea0c13;
   color: rgb(0, 0, 0);
   font-family: Geo;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   border: #0000005d;
   height: 4rem;
   width: 9rem;
@@ -286,18 +302,37 @@ button {
 
 button:hover {
   background-color: #940308;
-
   color: rgb(255, 255, 255);
 }
 
 .merch {
   background-color: #000000b9;
   box-shadow: 0 0px 20px rgba(255, 0, 0, 0.445) inset;
+  display: flex;
+  align-items: end;
+}
+
+.merch h2 {
+  font-size: 3rem;
+  font-family: Syncopate;
+}
+
+.merch h3 {
+  color: #da1741;
+  font-family: Nunito;
+}
+
+.buy {
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
 }
 
 .buy-now {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
 }
 
 footer {
@@ -342,12 +377,13 @@ footer {
   align-items: center;
   margin: 1rem;
 }
-small{
+small {
   margin-top: 3rem;
 }
-@media (max-width: 1024px) {
+
+@media (max-width: 768px) {
   * {
-    font-size: 50%;
+    margin: 0px;
   }
   .mobile-icon {
     display: flex;
@@ -384,56 +420,27 @@ small{
 
   .sponser-cards {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    animation: scroll 10s linear infinite;
   }
 
-  .team-cards {
+  .merch {
     display: flex;
     flex-direction: column;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-footer {
+    margin: 0%;
     align-items: center;
   }
-}
 
-.more-expansive {
-  display: grid;
-  justify-items: center;
-  gap: 10px;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 30px;
-  border-radius: 15px;
-}
-
-.more-expansive img {
-  max-width: 280px;
-  height: auto;
-  border-radius: 10px;
-}
-
-.more-expansive-name {
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.status {
-  font-size: 28px;
-  color: transparent;
-  -webkit-text-stroke: 2px white;
-}
-
-.descripe {
-  font-size: 16px;
-  color: #ccc;
-}
-
-.motivational {
-  font-size: 14px;
-  width: 80%;
-  margin: 10px auto;
-}
-
-.price {
-  font-weight: bold;
-  font-size: 20px;
-  color: #fff;
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+  }
 }
