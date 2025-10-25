@@ -306,6 +306,8 @@ footer {
   background-size: cover;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  min-height: 20rem;
 }
 
 .left-footer {
@@ -324,11 +326,28 @@ footer {
   display: flex;
   gap: 4rem;
   margin-right: 2rem;
+  font-family: Geo;
+  list-style-type: none;
 }
 
-@media (max-width: 768px) {
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.links ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+small{
+  margin-top: 3rem;
+}
+@media (max-width: 1024px) {
   * {
-    font-size: 10px;
+    font-size: 50%;
   }
   .mobile-icon {
     display: flex;
@@ -350,6 +369,7 @@ footer {
     background-position: right;
     display: flex;
     align-items: center;
+    min-height: 50vh;
   }
 
   .hero-paragtaph {
@@ -373,4 +393,47 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.more-expansive {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.more-expansive img {
+  max-width: 280px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.more-expansive-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.status {
+  font-size: 28px;
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+}
+
+.descripe {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.motivational {
+  font-size: 14px;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
 }
