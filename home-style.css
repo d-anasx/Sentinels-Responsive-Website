@@ -78,7 +78,7 @@ a {
 main {
   display: flex;
   flex-direction: column;
-  row-gap: 4rem;
+  row-gap: 3rem;
 }
 
 .hero {
@@ -305,6 +305,11 @@ button:hover {
   color: rgb(255, 255, 255);
 }
 
+button a {
+  font-family: Geo;
+  font-size: 1.3rem;
+}
+
 .merch {
   background-color: #000000b9;
   box-shadow: 0 0px 20px rgba(255, 0, 0, 0.445) inset;
@@ -318,7 +323,7 @@ button:hover {
 }
 
 .merch h3 {
-  color: #CE0037;
+  color: #ce0037;
   font-family: Syncopate;
   font-size: 2rem;
 }
@@ -330,7 +335,7 @@ button:hover {
 }
 
 .strok {
-  -webkit-text-stroke-width:2px ;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: rgb(255, 255, 255);
   color: transparent;
 }
