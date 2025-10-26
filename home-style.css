@@ -318,14 +318,21 @@ button:hover {
 }
 
 .merch h3 {
-  color: #da1741;
-  font-family: Nunito;
+  color: #CE0037;
+  font-family: Syncopate;
+  font-size: 2rem;
 }
 
 .buy {
   display: flex;
   flex-direction: column;
   gap: 15rem;
+}
+
+.strok {
+  -webkit-text-stroke-width:2px ;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+  color: transparent;
 }
 
 .buy-now {
@@ -371,7 +378,7 @@ footer {
   align-items: center;
 }
 
-.links ul {
+.links li {
   display: flex;
   flex-direction: column;
   align-items: center;
