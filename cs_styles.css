@@ -229,13 +229,12 @@ body {
   position: relative; 
   background-color: rgb(43, 16, 16);
   border-radius: 0.3em;
-  box-shadow: 5px 5px 60px #000000;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4em;
   height: fit-content;
-  width: 80vw;
+  margin: 1em;
   justify-self: center;
   margin-bottom: 2em;
 }
@@ -274,7 +273,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   padding: 2em 1em 2em 1em;
-  gap: 4em;
+  gap: 5em;
   height: fit-content;
   
 }
@@ -283,10 +282,10 @@ body {
   height: fit-content;
   border-radius: 0.3em;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: center;  
-  gap: 3em;
   transition: 0.3s;
+  width: 40vw;
 }
 
 .highlight_img{
@@ -342,7 +341,11 @@ svg {
   opacity: 0;
   transition: 0.3s ease-in-out ;
   text-shadow: 0px 8px 25px rgba(229, 93, 93, 0.6) ;
-  width: 30em;
+  width: clamp(200px, 50%, 600px);
+}
+
+.highlight_text h1{
+  font-size: clamp(2rem, 4vw, 3rem);
 }
 
 
