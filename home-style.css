@@ -1,0 +1,458 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+body {
+  background-image: linear-gradient(
+    180deg,
+    rgb(0, 0, 0),
+    rgb(31, 0, 0),
+    #79021c
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  color: white;
+  font-family: Geo;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-bar {
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.723);
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  width: 4rem;
+  height: auto;
+  margin-left: 1rem;
+}
+
+.logo-text {
+  height: 2.4rem;
+}
+
+.logo-foot {
+  width: 10rem;
+  height: auto;
+}
+
+.social-logo {
+  width: 2.5rem;
+  height: auto;
+}
+
+.mobile-icon {
+  display: none;
+  font-size: 4rem;
+}
+
+.pc-nav {
+  display: flex;
+  gap: 4rem;
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: Orbitron;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 4rem;
+  justify-content: center;
+  background-image: url(public/champions-made.jpg);
+  background-color: red;
+  background-size: cover;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 20px #d8023091;
+}
+
+h1 {
+  font-size: 5rem;
+  text-shadow: 0px 0px 50px #efedd2;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+.hero-paragtaph {
+  background-color: #43010f86;
+  width: 25rem;
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+}
+
+.latest {
+  background-color: #43010f70;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0px 5px 20px #ff00002a;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.latest h2 {
+  font-size: 4rem;
+  margin: 2rem;
+  color: #fffde0;
+}
+
+.read {
+  color: #ff3c66;
+  font-family: Geo;
+  font-size: 1.2rem;
+}
+
+.champions-img {
+  width: 50vw;
+  margin: 2rem;
+  border-radius: 40px;
+  transition: 0.3s ease-in-out;
+}
+
+.champions-img:hover {
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.latest-info {
+  display: flex;
+}
+
+.latest-paragraphs {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem;
+}
+
+.latest-paragraphs p {
+  margin: 2rem;
+}
+
+h3 {
+  font-size: 3rem;
+  margin: 2rem;
+}
+
+.sponsers {
+  background-color: #280009;
+  border-radius: 40px;
+  box-shadow: 0px 0px 20px #ff000046;
+  min-height: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.sponsor-strip {
+  overflow: hidden;
+}
+
+.sponser-cards {
+  display: flex;
+  gap: 10rem;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+}
+
+.s-card {
+  background-color: #0000005d;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  box-shadow: inset 0px 0px 20px #ff000042;
+  transition: 0.3s ease-in-out;
+}
+
+.s-card img {
+  width: 10rem;
+  height: auto;
+  margin: 2rem;
+  filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.288));
+  transition: 0.3s ease-in-out;
+}
+
+.s-card a {
+  padding: 0px;
+}
+
+.s-card:hover {
+  box-shadow: inset 0px 0px 40px #ff000042;
+  transform: translateY(-2px);
+}
+
+.s-card img:hover {
+  filter: drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.671));
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.team {
+  background-color: #43010f70;
+  border-radius: 40px;
+  box-shadow: 0px 0px 20px #79021c;
+  min-height: 80rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+.bar {
+  background-image: url(public/sentinels-bar.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 15rem;
+}
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.t-card {
+  width: 25rem;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #18000570;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 0px 20px #79021c;
+  transition: 0.3s ease-in-out;
+}
+
+.t-card:hover {
+  box-shadow: 0px 0px 40px #ff000042;
+  transform: translateY(-1rem);
+}
+
+.t-card img {
+  height: 70%;
+  overflow: hidden;
+}
+
+.t-card button {
+  margin-left: 60%;
+  margin-bottom: 0.5rem;
+}
+
+.player-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  gap: 1rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+button {
+  background-color: #ea0c13;
+  color: rgb(0, 0, 0);
+  font-family: Geo;
+  font-size: 1.3rem;
+  border: #0000005d;
+  height: 4rem;
+  width: 9rem;
+  border-top-right-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #940308;
+  color: rgb(255, 255, 255);
+}
+
+button a {
+  font-family: Geo;
+  font-size: 1.3rem;
+}
+
+.merch {
+  background-color: #000000b9;
+  box-shadow: 0 0px 20px rgba(255, 0, 0, 0.445) inset;
+  display: flex;
+  align-items: end;
+}
+
+.merch h2 {
+  font-size: 3rem;
+  font-family: Syncopate;
+}
+
+.merch h3 {
+  color: #ce0037;
+  font-family: Syncopate;
+  font-size: 2rem;
+}
+
+.buy {
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
+}
+
+.strok {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+  color: transparent;
+}
+
+.buy-now {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+}
+
+footer {
+  background-image: linear-gradient(180deg, #79021c9f, black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 20rem;
+}
+
+.left-footer {
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.socials {
+  display: flex;
+  gap: 1.3rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 4rem;
+  margin-right: 2rem;
+  font-family: Geo;
+  list-style-type: none;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.links li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+small {
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  * {
+    margin: 0px;
+  }
+  .mobile-icon {
+    display: flex;
+  }
+  .pc-nav {
+    display: none;
+  }
+  .col-nav:hover .mobile-icon {
+    display: none;
+  }
+  .col-nav:hover .mobile-nav {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+  }
+
+  .hero {
+    background-position: right;
+    display: flex;
+    align-items: center;
+    min-height: 50vh;
+  }
+
+  .hero-paragtaph {
+    width: 30rem;
+    padding: 3rem;
+  }
+
+  .latest-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sponser-cards {
+    display: flex;
+    animation: scroll 10s linear infinite;
+  }
+
+  .merch {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-footer {
+    margin: 0%;
+    align-items: center;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+  }
+}

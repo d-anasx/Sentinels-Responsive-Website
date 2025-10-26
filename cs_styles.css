@@ -1,0 +1,602 @@
+:root {
+	--gradient-shadow: linear-gradient(
+		45deg,
+		#fb2600,
+		#000000
+	);
+}
+
+body,html {
+  overflow-x: clip;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-bar {
+  padding: 0.3em;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.723);
+  backdrop-filter: blur(8px);
+  
+}
+.logo {
+  width: 3rem;
+  height: auto;
+  margin-left: 1rem;
+}
+
+.logo-text {
+  height: 2rem;
+}
+
+.logo-foot {
+  width: 10rem;
+  height: auto;
+}
+
+.social-logo {
+  width: 2.5rem;
+  height: auto;
+}
+
+
+.mobile-icon {
+  display: none;
+  font-size: 2.5rem;
+}
+
+.pc-nav {
+  display: flex;
+  gap: 4rem;
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.mobile-nav a{
+  
+  font-size: 0.5em;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: Orbitron;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: Geo;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #000000, #1f0107, #79021c);
+   /* background: linear-gradient(168deg, #1e1111, #501e1e); */
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+  height: 30em;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("public/valorant-champions-tour-2024-americas-kickoff.jpeg");
+  background-position: 25% 25%;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url("public/SentinelsSkyfallEditsentinelsvalorantvct-ezgif.com-video-to-gif-converter.gif")
+      no-repeat center/cover;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hero:hover::after {
+  opacity: 1;
+}
+
+.hero-logo {
+  display: flex;
+  font-size: 1.5em;
+}
+
+.hero-img {
+  width: 2em;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  z-index: 10;
+}
+
+.hero-title h2 {
+  font-size: 4em;
+  width: 10em;
+}
+
+.championships {
+  background-color: rgb(43, 16, 16);
+  border-radius: 0.3em;
+  margin: 2em 1em 2em 1em;
+  height: fit-content;
+  gap: 1em;
+  justify-content: space-around;
+  padding: 1em 1em 1em 1em;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.championships_content {
+  padding-left: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  position: relative;
+  transition: 0.3s ;
+}
+
+.championships_content:hover{
+  box-shadow: 0 5px 15px #a41515 ;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.championships_content span{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+	height: 0;
+	 border-right: 0px solid rgb(255, 0, 0);
+	border-bottom: 0px solid transparent;
+  opacity: 0;
+  transition: 0.3s ;
+}
+
+.championships_content:hover span{
+  opacity: 1;
+  border-right: 20px solid rgb(255, 0, 0);
+	border-bottom: 16px solid transparent;
+}
+
+
+.championships_content img {
+  width: 13em;
+  height: 8em;
+  border-radius: 0.2em;
+}
+
+.championships_text h1 {
+  font-size: 1.5em;
+  width: 14em;
+  text-align: center;
+}
+
+.championships_text p {
+  color: #aeaaaa;
+  text-align: center;
+}
+
+
+.championships::after, .championships::before{
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background: var(--gradient-shadow);
+  background-size: 400%;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  border-radius: inherit;
+  z-index: -1;
+  animation: animate 20s linear infinite;
+}
+
+.championships::after{
+  filter: blur(40px);
+}
+
+.highlights_container {
+  position: relative; 
+  background-color: rgb(43, 16, 16);
+  border-radius: 0.3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4em;
+  height: fit-content;
+  margin: 1em;
+  justify-self: center;
+  margin-bottom: 2em;
+}
+
+.highlights_container::before,
+.highlights_container::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background: var(--gradient-shadow);
+  background-size: 400%;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  border-radius: inherit;
+  z-index: -1;
+  animation: animate 20s linear infinite;
+}
+
+.highlights_container::after {
+  filter: blur(40px);
+}
+
+
+
+
+.highlights_container h1{
+  text-align: center;
+  font-size: 3em;
+  text-decoration: underline ;
+}
+
+.highlights{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2em 1em 2em 1em;
+  gap: 5em;
+  height: fit-content;
+  
+}
+
+.highlight {
+  height: fit-content;
+  border-radius: 0.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  width: 40vw;
+}
+
+.highlight_img{
+  background-image: url("public/Chàng\ trai\ gốc\ Việt\ vô\ địch\ VCT\ Masters\ Madrid\ 2024.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 12em;
+  height: 14em;
+  position: relative;
+  border-radius: 0.3em;
+  transition: 0.3s;
+}
+
+.highlight:nth-of-type(2) .highlight_img {
+  background-image: url("public/hourglass.jpg");
+  
+}
+.highlight:nth-of-type(3) .highlight_img{
+  background-image: url("public/images.jpg");
+ 
+}
+.highlight:nth-of-type(4) .highlight_img {
+  background-image: url("public/VCT_Masters_Reykjavík_lightmode.png");
+  background-color: rgba(14, 26, 80, 0.642);
+}
+
+svg {
+  width: 3em;
+  height: 3em;
+  padding: 0.6em;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.play {
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.play p {
+  font-weight: bold;
+  color: #000000;
+  background-color: red;
+  border-radius:  0 2em 2em 0;
+  padding: 0 1em 0 1em;
+}
+
+
+.highlight_text{
+  opacity: 0;
+  transition: 0.3s ease-in-out ;
+  text-shadow: 0px 8px 25px rgba(229, 93, 93, 0.6) ;
+  width: clamp(200px, 50%, 600px);
+}
+
+.highlight_text h1{
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+
+
+
+
+.highlight:hover  .highlight_text{
+  transform: translate(20%);
+  opacity: 1;
+}
+
+.highlight:hover  #even_text{
+  transform: translate(-20%);
+}
+
+
+
+.highlight:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+
+
+.highlight:hover .highlight_img{
+  transform: scale(1.2) translate(-20%);
+}
+
+.highlight:hover #even_image{
+  transform: scale(1.2) translate(20%);
+}
+
+ .img_date{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0 ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  box-sizing: border-box;
+  font-size: 2em;
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 0.1em;
+  box-shadow: rgba(255, 10, 10, 0.35) 0px -5px 50px;
+
+}
+
+.highlight:hover .img_date{
+  opacity: 1;
+
+}
+footer {
+  background-image: linear-gradient(180deg, #79021c9f, black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 20rem;
+}
+
+.left-footer {
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.socials {
+  display: flex;
+  gap: 1.3rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 4rem;
+  margin-right: 2rem;
+  font-family: Geo;
+  list-style-type: none;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.links li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+small{
+  margin-top: 3rem;
+}
+
+.links a {
+  transition: 0.2s;
+}
+
+.links a:hover{
+  color: #000000;
+}
+
+.left-footer img {
+  transition: 0.2s;
+}
+
+.left-footer img:hover{
+  box-shadow: 5px 5px 60px black;
+}
+
+/* animation keyframes */
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+
+
+/* responsive management */
+
+@media ( min-width: 300px ) and (max-width: 700px) {
+   .championships{
+    justify-content: center;
+  }
+
+  .championships_content{
+    width: 100%;
+}
+
+.championships_text h4 {
+  font-size: 1.5em;
+  width: 10em;
+  text-align: center;
+}
+
+.hero-title h2 {
+  font-size: 3.5em;
+  width: 6em;
+}
+
+.highlight_text {
+  width: 13em;
+}
+  
+}
+
+
+@media (max-width : 1255px){
+  .championships_content{
+    flex-direction: column;
+    
+    justify-content: center;
+
+    
+  }
+
+  .highlight{
+    flex-direction: column;
+    gap: 1em;
+  }
+  .highlight_text{
+  opacity: 1;
+}
+
+  .highlight:nth-child(even) {
+  flex-direction: column;
+}
+
+.highlight:hover .highlight_img{
+  transform: scale(1) translate(0%);
+}
+
+.highlight:hover #even_image{
+  transform: scale(1) translate(0%);
+}
+
+.highlight:hover  .highlight_text{
+  transform: translate(0%);
+}
+
+.highlight:hover  #even_text{
+  transform: translate(0%);
+}
+}
+
+
+
+
+@media (max-width: 700px) {
+  .hero {
+    background-position: right;
+  }
+
+  
+
+  .latest-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-icon {
+    display: flex;
+  }
+  .pc-nav {
+    display: none;
+  }
+  .col-nav:hover .mobile-icon {
+    display: none;
+  }
+  .col-nav:hover .mobile-nav {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-footer {
+    margin: 0%;
+    align-items: center;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+  }
+}
+
+
+
+
+
+
+
