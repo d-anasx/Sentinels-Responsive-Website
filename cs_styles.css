@@ -1,3 +1,11 @@
+:root {
+	--gradient-shadow: linear-gradient(
+		45deg,
+		#fb2600,
+		#000000
+	);
+}
+
 body,html {
   overflow-x: clip;
 }
@@ -74,12 +82,10 @@ a {
 }
 
 body {
-  /* background-image: linear-gradient(to bottom, #000000, #1f0107, #79021c); */
-   background: linear-gradient(168deg, #1e1111, #501e1e);
-  background-size: 600% 600%;
+  background-image: linear-gradient(to bottom, #000000, #1f0107, #79021c);
+   /* background: linear-gradient(168deg, #1e1111, #501e1e); */
   background-repeat: no-repeat;
   width: 100%;
-  animation: AnimationName 7s ease infinite;
 }
 
 @keyframes AnimationName {
@@ -148,10 +154,10 @@ body {
   height: fit-content;
   gap: 1em;
   justify-content: space-around;
-  box-shadow: 5px 5px 20px #a41515;
   padding: 1em 1em 1em 1em;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .championships_content {
@@ -204,26 +210,80 @@ body {
   text-align: center;
 }
 
+
+.championships::after, .championships::before{
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background: var(--gradient-shadow);
+  background-size: 400%;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  border-radius: inherit;
+  z-index: -1;
+  animation: animate 20s linear infinite;
+}
+
+.championships::after{
+  filter: blur(40px);
+}
+
 .highlights_container {
+  position: relative; 
   background-color: rgb(43, 16, 16);
   border-radius: 0.3em;
-  box-shadow: 5px 5px 20px #a41515;
+  box-shadow: 5px 5px 60px #000000;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4em;
   height: fit-content;
-  width: 50vw;
-  margin: auto  ;
+  width: 80vw;
+  justify-self: center;
+  margin-bottom: 2em;
 }
+
+.highlights_container::before,
+.highlights_container::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background: var(--gradient-shadow);
+  background-size: 400%;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  border-radius: inherit;
+  z-index: -1;
+  animation: animate 20s linear infinite;
+}
+
+.highlights_container::after {
+  filter: blur(40px);
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
 
 .highlights_container h1{
   text-align: center;
+  font-size: 3em;
+  text-decoration: underline ;
 }
 
 .highlights{
   display: flex;
-  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
@@ -247,8 +307,8 @@ body {
   background-image: url("public/Chàng\ trai\ gốc\ Việt\ vô\ địch\ VCT\ Masters\ Madrid\ 2024.jpg");
   background-position: center;
   background-size: cover;
-  width: 16em;
-  height: 20em;
+  width: 12em;
+  height: 14em;
   position: relative;
   border-radius: 0.3em;
   transition: 0.3s;
@@ -352,6 +412,67 @@ svg {
 .highlight:hover .img_date{
   opacity: 1;
 
+}
+footer {
+  background-image: linear-gradient(180deg, #79021c9f, black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 20rem;
+}
+
+.left-footer {
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.socials {
+  display: flex;
+  gap: 1.3rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 4rem;
+  margin-right: 2rem;
+  font-family: Geo;
+  list-style-type: none;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.links ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+small{
+  margin-top: 3rem;
+}
+
+.links a {
+  transition: 0.2s;
+}
+
+.links a:hover{
+  color: #000000;
+}
+
+.left-footer img {
+  transition: 0.2s;
+}
+
+.left-footer img:hover{
+  box-shadow: 5px 5px 60px black;
 }
 
 @media ( min-width: 300px ) and (max-width: 700px) {
